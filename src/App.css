@@ -1,0 +1,26 @@
+#root {
+  width: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e5daca;
+}
+
+.border-opac{
+  border-bottom: 0.8px solid rgba(255, 255, 255, 0.4);
+}
+
+.border-opac-box{
+  border: 0.8px solid rgba(255, 255, 255, 0.4);
+}
+.itali{
+  font-family: 'Italiana', sans-serif;
+}
+.eb{
+  font-family: 'EB Garamond', sans-serif;
+  font-style: italic;
+}
+.c{
+  font-family: 'Montserrat', sans-serif;
+}
