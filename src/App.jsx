@@ -11,6 +11,7 @@ import Faq from './pages/Home/Faq'
 import Numbers from './pages/Home/Numbers'
 import FooterForm from './pages/Home/FooterForm'
 import { Toaster } from 'react-hot-toast'
+import Footer from './components/Footer'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -25,7 +26,9 @@ function App() {
       <Faq />
       <Numbers />
       <FooterForm />
+      <Footer />
       <Toaster />
+
     </>
   )
 }
