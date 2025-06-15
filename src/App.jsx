@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -12,21 +13,19 @@ import Numbers from './pages/Home/Numbers'
 import FooterForm from './pages/Home/FooterForm'
 import { Toaster } from 'react-hot-toast'
 import Footer from './components/Footer'
+import Home from './pages/Home/Home'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Header />
-      <Hero />
-      <SmallAbout />
-      <ShowCase />
-      <OurProcess />
-      <Faq />
-      <Numbers />
-      <FooterForm />
-      <Footer />
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
+      </Router>
+
       <Toaster />
 
     </>

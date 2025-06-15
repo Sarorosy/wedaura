@@ -1,16 +1,20 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const navLinks = ['Home', 'About', 'Portfolio', 'Blog', 'Contact'];
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const navigate = useNavigate();
 
     return (
         <header className="absolute top-0 left-0 w-full z-50 text-white py-6 px-6 md:px-10 flex justify-between items-center">
             {/* Logo */}
-            <div className="text-4xl md:text-5xl itali cursor-pointer hover:text-accent transition-all">WedAura</div>
+            <div 
+            onClick={() => navigate('/')}   
+            className="text-4xl md:text-5xl itali cursor-pointer hover:text-accent transition-all">WedAura</div>
 
             {/* Desktop Navigation */}
             <nav className="hidden md:flex space-x-6 text-sm font-semibold">
