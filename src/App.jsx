@@ -6,6 +6,7 @@ import Header from './components/Header'
 import Hero from './pages/Home/Hero'
 import SmallAbout from './pages/Home/SmallAbout'
 import ShowCase from './pages/Home/ShowCase'
+import OurProcess from './pages/Home/OurProcess'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,6 +17,7 @@ function App() {
       <Hero />
       <SmallAbout />
       <ShowCase />
+      <OurProcess />
     </>
   )
 }
