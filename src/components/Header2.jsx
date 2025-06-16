@@ -3,14 +3,14 @@ import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-const navLinks = ["Gallery", "About", "Contact"];
+const navLinks = ["Home", "Gallery", "About", "Contact"];
 
-const Header = () => {
+const Header2 = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
 
   return (
-    <header className="absolute top-0 left-0 w-full z-50 text-white py-6 px-6 md:px-10 flex justify-between items-center">
+    <header className=" w-full z-50 bg-primary text-white py-6 px-6 md:px-10 flex justify-between items-center">
       {/* Logo */}
       <div
         onClick={() => navigate("/")}
@@ -25,7 +25,7 @@ const Header = () => {
           <button
             key={idx}
             onClick={() => {
-              navigate(`/${link.toLowerCase()}`);
+              link == "Home" ? navigate('/') : navigate(`/${link.toLowerCase()}`);
             }}
             className="hover:text-accent transition"
           >
@@ -49,7 +49,7 @@ const Header = () => {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", stiffness: 80 }}
-            className="fixed top-0 right-0 w-64 h-full bg-black bg-opacity-95 backdrop-blur-lg z-50 p-6 flex flex-col space-y-6"
+            className=" w-64 h-full bg-black bg-opacity-95 backdrop-blur-lg z-50 p-6 flex flex-col space-y-6"
           >
             {/* Close Icon */}
             <div className="flex justify-end">
@@ -65,7 +65,7 @@ const Header = () => {
                   key={idx}
                   onClick={() => {
                     setIsOpen(false);
-                    navigate(`/${link.toLowerCase()}`);
+                    link == "Home" ? navigate('/') : navigate(`/${link.toLowerCase()}`);
                   }}
                   className="hover:text-accent transition"
                 >
@@ -80,4 +80,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Header2;

@@ -14,6 +14,10 @@ import FooterForm from './pages/Home/FooterForm'
 import { Toaster } from 'react-hot-toast'
 import Footer from './components/Footer'
 import Home from './pages/Home/Home'
+import OfferModal from './components/OfferModal'
+import Gallery from './pages/Gallery'
+import Contact from './pages/Contact'
+import ScrollToTop from './components/ScrollToTop'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -21,12 +25,17 @@ function App() {
   return (
     <>
       <Router>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
 
       <Toaster />
+      <OfferModal />
+      
 
     </>
   )
