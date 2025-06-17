@@ -14,6 +14,9 @@ import {
   Target
 } from 'lucide-react';
 import ab from '../assets/about.jpg'
+import Header2 from '../components/Header2';
+import Footer from '../components/Footer';
+import abtvdo from '../assets/about.mp4';
 
 const About = () => {
   const stats = [
@@ -89,9 +92,23 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-pastel">
+    <>
+    <Header2 />
+    <div className="min-h-screen bg-pastel overflow-x-hidden">
       {/* Hero Section */}
-      <section className="relative py-20 px-4 bg-gradient-to-br from-primary via-secondary to-darkBrown overflow-hidden">
+      <section 
+  className="relative py-20 px-4 bg-gradient-to-br from-primary via-secondary to-darkBrown overflow-hidden"
+>
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute top-0 left-0 w-full h-full object-cover z-0"
+  >
+    <source src={abtvdo} type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="relative max-w-6xl mx-auto text-center">
           <div className="mb-8">
@@ -284,6 +301,8 @@ const About = () => {
         </div>
       </section>
     </div>
+    <Footer />
+    </>
   );
 };
 
