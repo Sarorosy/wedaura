@@ -21,7 +21,6 @@ import ScrollToTop from './components/ScrollToTop'
 import About from './pages/About'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>

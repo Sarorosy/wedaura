@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Typewriter } from 'react-simple-typewriter';
+import { Film } from 'lucide-react';
 
 const SmallAbout = () => {
   return (
@@ -12,43 +12,29 @@ const SmallAbout = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >
-        <h2 className="text-3xl sm:text-4xl md:text-5xl mb-6 leading-tight">
-          Crafted edits,{' '}
-          <span className="text-darkBrown font-serifStyle italic">
-            <Typewriter
-              words={[
-                'timeless memories',
-                'love in motion',
-                'emotive stories',
-                'cinematic elegance',
-                'your wedding legacy',
-              ]}
-              loop={true}
-              cursor
-              cursorStyle="|"
-              typeSpeed={60}
-              deleteSpeed={40}
-              delaySpeed={2000}
-            />
-          </span>
+        <h1 className='flex items-center justify-center my-2 rotate-15'><Film size={24}  /></h1>
+        <h2 className="text-4xl md:text-5xl font-medium font-serifStyle leading-tight mb-6">
+          YOUR WEDDING STORY,
+          <br />
+          <span className="text-darkBrown font-serifStyle italic text-3xl md:text-4xl">Our Editing Skills</span>
         </h2>
 
-        <p className="text-secondary text-base leading-relaxed mb-6">
-          At <span className="font-semibold text-primary">WedAura</span>, we craft timeless memories through the art of wedding video editing.
-          Our passionate editors transform raw footage into emotional, personalized masterpieces.
+        <p className="text-secondary text-base md:text-lg leading-relaxed mb-6 eb-regular">
+          At <span className="font-semibold text-primary">Folklore</span>, we cover the best bits of your big day through artful editing. 
+          Our team of experienced and passionate editors is dedicated to transforming your raw footage into a personalized masterpiece.
         </p>
 
-        <p className="text-secondary text-base leading-relaxed mb-8">
-          Every wedding is unique — and your video should be too. We help you grow your business by handling the entire editing process,
-          so you can focus on scaling your brand, not just managing it.
+        <p className="text-secondary text-base md:text-lg leading-relaxed mb-8 eb-regular">
+          Creating comprehensive videos and capturing the essence of your wedding. We help you expand your business by managing your entire editing process — 
+          so you can focus on advancing your wedding business rather than merely operating within it.
         </p>
 
         <motion.a
           href="#contact"
-          className="inline-block bg-darkBrown text-white px-6 py-2 rounded-full text-sm font-medium shadow hover:bg-primary transition"
+          className="inline-block  border border-darkBrown text-darkBrown px-6 py-2 rounded text-sm font-medium shadow hover:bg-darkBrown hover:text-white transition"
           whileHover={{ scale: 1.05 }}
         >
-          Let's connect
+          Let’s connect
         </motion.a>
       </motion.div>
     </section>

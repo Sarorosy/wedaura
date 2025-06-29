@@ -16,7 +16,7 @@ const Header2 = () => {
         onClick={() => navigate("/")}
         className="text-4xl md:text-5xl itali cursor-pointer hover:text-accent transition-all"
       >
-        WedAura
+        Folklore
       </div>
 
       {/* Desktop Navigation */}

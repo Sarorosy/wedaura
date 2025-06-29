@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, PlayCircle } from "lucide-react";
-import Header2 from "../components/Header2";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 import one from "../assets/gallery/1.jpg";
 import two from "../assets/gallery/2.jpg";
@@ -97,7 +97,7 @@ const Gallery = () => {
 
   return (
     <div className="bg-pastel min-h-screen">
-      <Header2 />
+      <Header />
 
       <div className="py-10">
         <h1 className="text-center text-4xl font-serifStyle text-primary mb-8">Wedding Gallery</h1>

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import { Mail, Phone, Instagram } from "lucide-react";
-import Header2 from "../components/Header2";
+import Header from "../components/Header";
 import Footer from "../components/Footer";
 import contactbg from '../assets/contact-bg.jpg';
 
@@ -34,7 +34,7 @@ const Contact = () => {
 
   return (
     <div className="bg-pastel min-h-screen">
-      <Header2 />
+      <Header />
       <div
         className="bg-cover bg-center bg-no-repeat py-20 px-4"
         style={{
@@ -45,7 +45,7 @@ const Contact = () => {
         <div className="bg-accent bg-opacity-90 max-w-4xl mx-auto rounded-xl shadow-xl p-8 backdrop-blur-md">
           <h1 className="text-4xl font-serifStyle text-primary mb-2 text-center">Get in Touch</h1>
           <p className="text-center text-md font-elegance text-darkBrown mb-6">
-            We'd love to hear from you! Fill out the form below to get in touch with the <strong>WedAura</strong> team.
+            We'd love to hear from you! Fill out the form below to get in touch with the <strong>Folklore</strong> team.
           </p>
           <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4 font-serifStyle text-sm">
             <div>
@@ -132,7 +132,7 @@ const Contact = () => {
             </p>
             <p className="text-sm text-darkBrown mt-1">
               <Mail className="inline-block mr-1" size={16} />
-              info@wedAura.in
+              info@Folklore.in
             </p>
             <div className="mt-4">
               <a

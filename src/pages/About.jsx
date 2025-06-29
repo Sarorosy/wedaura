@@ -14,7 +14,7 @@ import {
   Target
 } from 'lucide-react';
 import ab from '../assets/about.jpg'
-import Header2 from '../components/Header2';
+import Header from '../components/Header';
 import Footer from '../components/Footer';
 import abtvdo from '../assets/about.mp4';
 
@@ -53,21 +53,21 @@ const About = () => {
     {
       name: "Sarah & Michael Chen",
       image: "https://img.freepik.com/free-photo/couple-with-lollipop_23-2148011860.jpg?uid=R103194381&ga=GA1.1.289768406.1747801732&semt=ais_hybrid&w=740",
-      text: "WedAura transformed our wedding footage into pure magic! The cinematic quality and attention to detail exceeded all our expectations. We've watched our video dozens of times and still get emotional every single time.",
+      text: "Folklore transformed our wedding footage into pure magic! The cinematic quality and attention to detail exceeded all our expectations. We've watched our video dozens of times and still get emotional every single time.",
       rating: 5,
       location: "San Francisco, CA"
     },
     {
       name: "Emma & David Johnson",
       image: "https://img.freepik.com/free-photo/smiling-young-woman-man-showing-heart-by-hands_23-2148020225.jpg?uid=R103194381&ga=GA1.1.289768406.1747801732&semt=ais_hybrid&w=740",
-      text: "From start to finish, WedAura was incredible to work with. They captured moments we didn't even know happened and turned them into a beautiful story. The color grading is absolutely stunning!",
+      text: "From start to finish, Folklore was incredible to work with. They captured moments we didn't even know happened and turned them into a beautiful story. The color grading is absolutely stunning!",
       rating: 5,
       location: "Austin, TX"
     },
     {
       name: "Priya & Raj Patel",
       image: "https://img.freepik.com/free-photo/smiling-couple-holding-each-other-s-hand-standing-against-blue-sky_23-2148103056.jpg?uid=R103194381&ga=GA1.1.289768406.1747801732&semt=ais_hybrid&w=740",
-      text: "WedAura perfectly captured the essence of our multicultural wedding. They understood our vision and delivered a masterpiece that beautifully blends both our traditions. Simply phenomenal work!",
+      text: "Folklore perfectly captured the essence of our multicultural wedding. They understood our vision and delivered a masterpiece that beautifully blends both our traditions. Simply phenomenal work!",
       rating: 5,
       location: "Los Angeles, CA"
     }
@@ -93,7 +93,7 @@ const About = () => {
 
   return (
     <>
-    <Header2 />
+    <Header />
     <div className="min-h-screen bg-pastel overflow-x-hidden">
       {/* Hero Section */}
       <section 
@@ -113,7 +113,7 @@ const About = () => {
         <div className="relative max-w-6xl mx-auto text-center">
           <div className="mb-8">
             <h1 className="text-5xl md:text-7xl itali text-accent mb-4">
-              WedAura
+              Folklore
             </h1>
             <p className="text-xl md:text-2xl font-elegance text-lightGray mb-6">
               Where Love Stories Come to Life
@@ -148,7 +148,7 @@ const About = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-romantica text-primary mb-6">
-              About WedAura
+              About Folklore
             </h2>
             <div className="w-20 h-1 bg-secondary mx-auto mb-8"></div>
           </div>
@@ -156,7 +156,7 @@ const About = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
             <div className="space-y-6">
               <p className="text-lg text-primary leading-relaxed font-serifStyle">
-                At WedAura, we operate as a close-knit, highly skilled team, dedicated to delivering exceptional wedding videography. We're your creative partners, ready to turn your love story into a captivating cinematic reality.
+                At Folklore, we operate as a close-knit, highly skilled team, dedicated to delivering exceptional wedding videography. We're your creative partners, ready to turn your love story into a captivating cinematic reality.
               </p>
               <p className="text-lg text-primary leading-relaxed font-serifStyle">
                 We believe that every wedding video has the potential to be a cinematic masterpiece. That's why we are committed to helping couples achieve their vision and create videos that are both visually stunning and emotionally engaging.

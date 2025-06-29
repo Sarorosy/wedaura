@@ -10,7 +10,7 @@ export default {
         primary: "#1c2421",   // Deep forest green
         secondary: "#4e624d", // Muted olive
         accent: "#e5daca",    // Cream/beige
-        darkBrown: "#44382c", // Rich brown
+        darkBrown: "#34160e", // Rich brown
         lightGray: "#d0cdca", // Light stone
         pastel : '#FCFAEE', //pastel White
       },

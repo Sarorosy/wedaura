@@ -1,32 +1,32 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
+import { X, Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const videos = [
   {
     id: 1,
-    title: 'Ethereal Garden Wedding | San Diego, CA',
-    thumbnail: 'https://images.pexels.com/photos/1488315/pexels-photo-1488315.jpeg?auto=compress&cs=tinysrgb&w=800',
-    videoUrl: 'https://player.vimeo.com/video/321232031',
+    title: 'Wedding Highlight 1',
+    videoUrl: 'https://www.youtube.com/embed/k-hL4ZQs9Qs',
+    thumb: 'https://img.youtube.com/vi/k-hL4ZQs9Qs/maxresdefault.jpg',
   },
   {
     id: 2,
-    title: 'Metreon Same Day Edit | San Francisco, CA',
-    thumbnail: 'https://images.pexels.com/photos/1444442/pexels-photo-1444442.jpeg?auto=compress&cs=tinysrgb&w=800',
-    videoUrl: 'https://player.vimeo.com/video/240580347',
-  },
-  {
-    id: 3,
-    title: 'Rustic Love | Lake Tahoe, CA',
-    thumbnail: 'https://images.pexels.com/photos/313707/pexels-photo-313707.jpeg?auto=compress&cs=tinysrgb&w=800',
-    videoUrl: 'https://player.vimeo.com/video/321232031',
+    title: 'Wedding Highlight 2',
+    videoUrl: 'https://www.youtube.com/embed/RTo696CMxdw',
+    thumb: 'https://img.youtube.com/vi/RTo696CMxdw/maxresdefault.jpg',
   },
   {
     id: 4,
-    title: 'Modern Elegance | Los Angeles, CA',
-    thumbnail: 'https://images.pexels.com/photos/2959192/pexels-photo-2959192.jpeg?auto=compress&cs=tinysrgb&w=800',
-    videoUrl: 'https://player.vimeo.com/video/240580347',
+    title: 'Wedding Highlight 5',
+    videoUrl: 'https://www.youtube.com/embed/4ClwQoxYu0o',
+    thumb: 'https://img.youtube.com/vi/4ClwQoxYu0o/maxresdefault.jpg',
+  },
+  {
+    id: 5,
+    title: 'Wedding Highlight 4',
+    videoUrl: 'https://www.youtube.com/embed/dHUafJjSb2A',
+    thumb: 'https://img.youtube.com/vi/dHUafJjSb2A/maxresdefault.jpg',
   },
 ];
 
@@ -35,50 +35,43 @@ const ShowCase = () => {
 
   return (
     <>
-      <section className="py-16 px-4 md:px-20 bg-secondary">
-        <h2 className="text-4xl font-bold font-itali text-center mb-12 text-accent">
-          Wedding Highlights
+      <section className="py-16 px-4 md:px-20 bg-secondary text-center">
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-2 uppercase tracking-wide font-serifStyle">
+          PORTFOLIO FILMS
         </h2>
+        <p className="text-sm md:text-base text-accent eb mb-10">
+          Visual Wonders created by our editing magicians
+        </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-5">
           {videos.map((video) => (
             <motion.div
               key={video.id}
-              whileHover={{ scale: 1.03 }}
               transition={{ duration: 0.3 }}
-              className="cursor-pointer bg-white shadow-2xl rounded-2xl overflow-hidden group"
+              className="relative cursor-pointer bg-white shadow-md rounded-lg overflow-hidden"
               onClick={() => setSelectedVideo(video)}
             >
-              <div className="relative aspect-video overflow-hidden">
+              <div className="aspect-video">
                 <img
-                  src={video.thumbnail}
+                  src={video.thumb}
                   alt={video.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="white"
-                    viewBox="0 0 24 24"
-                    stroke="white"
-                    strokeWidth={1.5}
-                    className="w-14 h-14 drop-shadow-lg"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 4l12 8-12 8V4z" />
-                  </svg>
+                {/* Centered Play Button */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="bg-secondary text-accent p-3 rounded-full shadow-md fill-white">
+                    <Play size={24} className='fill-accent' />
+                  </div>
                 </div>
-              </div>
-              <div className="p-4">
-                <p className="text-center text-base text-gray-700 italic font-medium">{video.title}</p>
               </div>
             </motion.div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="mt-12">
           <Link
             to="/gallery"
-            className="inline-block bg-primary text-white px-6 py-2 rounded-full shadow-md hover:bg-opacity-90 transition-all"
+            className="inline-block border border-primary text-primary hover:text-white hover:bg-primary text-white px-6 py-2 rounded-full shadow-md hover:bg-opacity-90 transition"
           >
             View More →
           </Link>
@@ -88,7 +81,7 @@ const ShowCase = () => {
       <AnimatePresence>
         {selectedVideo && (
           <motion.div
-            className="fixed inset-0 z-50 bg-black/95 backdrop-blur-sm flex items-center justify-center p-4"
+            className="fixed inset-0 z-50 bg-black/90 backdrop-blur-sm flex items-center justify-center p-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -98,10 +91,10 @@ const ShowCase = () => {
               animate={{ y: 0, opacity: 1 }}
               exit={{ y: 100, opacity: 0 }}
               transition={{ type: 'spring', stiffness: 100 }}
-              className="relative w-full max-w-4xl p-2 rounded-lg"
+              className="relative w-full max-w-4xl"
             >
               <iframe
-                src={`${selectedVideo.videoUrl}?autoplay=1`}
+                src={selectedVideo.videoUrl + '?autoplay=1'}
                 className="w-full aspect-video rounded-lg"
                 frameBorder="0"
                 allow="autoplay; fullscreen"

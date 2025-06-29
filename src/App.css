@@ -21,6 +21,13 @@ body {
   font-family: 'EB Garamond', sans-serif;
   font-style: italic;
 }
+
+.eb-regular{
+  font-family: 'EB Garamond', sans-serif;
+}
 .c{
   font-family: 'Montserrat', sans-serif;
+}
+.noto{
+  font-family: "Noto Serif Display", serif;
 }
