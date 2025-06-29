@@ -44,30 +44,33 @@ const ShowCase = () => {
           Visual Wonders created by our editing magicians
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 place-items-center">
-          {videos.map((video) => (
-            <motion.div
-              key={video.id}
-              transition={{ duration: 0.3 }}
-              className="relative cursor-pointer bg-white shadow-md rounded-lg overflow-hidden w-full max-w-md"
-              onClick={() => setSelectedVideo(video)}
-            >
-              <div className="aspect-video">
-                <img
-                  src={video.thumb}
-                  alt={video.title}
-                  className="w-full h-full object-cover"
-                />
-                {/* Centered Play Button */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="bg-secondary text-accent p-2.5 rounded-full shadow-md">
-                    <Play size={20} className="fill-accent" />
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          ))}
+        <div className="min-h-screen flex items-center justify-center">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
+    {videos.map((video) => (
+      <motion.div
+        key={video.id}
+        transition={{ duration: 0.3 }}
+        className="relative cursor-pointer bg-white shadow-md rounded-lg overflow-hidden w-full max-w-md"
+        onClick={() => setSelectedVideo(video)}
+      >
+        <div className="aspect-video">
+          <img
+            src={video.thumb}
+            alt={video.title}
+            className="w-full h-full object-cover"
+          />
+          {/* Centered Play Button */}
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="bg-secondary text-accent p-2.5 rounded-full shadow-md">
+              <Play size={20} className="fill-accent" />
+            </div>
+          </div>
         </div>
+      </motion.div>
+    ))}
+  </div>
+</div>
+
 
         <div className="mt-10">
           <Link
