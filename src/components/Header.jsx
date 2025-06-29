@@ -23,7 +23,7 @@ const Header = () => {
 
             <h2 className="noto text-3xl md:text-4xl font-medium">FOLKLORE</h2>
             <h3 className="noto text-2xl md:text-3xl ">PRODUCTIONS</h3>
-            <small className="font-sans text-[12px]">TURNING YOUR RAW FOOTAGE INTO TIMESS FOLKTALES</small>
+            {/* <small className="font-sans text-[12px]">TURNING YOUR RAW FOOTAGE INTO TIMESS FOLKTALES</small> */}
           </div>
         </div>
 

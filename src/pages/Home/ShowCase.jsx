@@ -1,3 +1,4 @@
+// ShowCase.jsx
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Play } from 'lucide-react';
@@ -35,20 +36,20 @@ const ShowCase = () => {
 
   return (
     <>
-      <section className="py-16 px-4 md:px-20 bg-secondary text-center">
+      <section className="py-14 px-4 md:px-20 bg-secondary text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-2 uppercase tracking-wide font-serifStyle">
           PORTFOLIO FILMS
         </h2>
-        <p className="text-sm md:text-base text-accent eb mb-10">
+        <p className="text-sm md:text-base text-accent eb mb-8">
           Visual Wonders created by our editing magicians
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6 place-items-center">
           {videos.map((video) => (
             <motion.div
               key={video.id}
               transition={{ duration: 0.3 }}
-              className="relative cursor-pointer bg-white shadow-md rounded-lg overflow-hidden"
+              className="relative cursor-pointer bg-white shadow-md rounded-lg overflow-hidden w-full max-w-md"
               onClick={() => setSelectedVideo(video)}
             >
               <div className="aspect-video">
@@ -59,8 +60,8 @@ const ShowCase = () => {
                 />
                 {/* Centered Play Button */}
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="bg-secondary text-accent p-3 rounded-full shadow-md fill-white">
-                    <Play size={24} className='fill-accent' />
+                  <div className="bg-secondary text-accent p-2.5 rounded-full shadow-md">
+                    <Play size={20} className="fill-accent" />
                   </div>
                 </div>
               </div>
@@ -68,10 +69,10 @@ const ShowCase = () => {
           ))}
         </div>
 
-        <div className="mt-12">
+        <div className="mt-10">
           <Link
             to="/gallery"
-            className="inline-block border border-primary text-primary hover:text-white hover:bg-primary text-white px-6 py-2 rounded-full shadow-md hover:bg-opacity-90 transition"
+            className="inline-block border border-primary text-white hover:bg-primary px-6 py-2 rounded-full shadow-md transition"
           >
             View More →
           </Link>

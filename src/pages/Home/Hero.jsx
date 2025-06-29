@@ -26,7 +26,7 @@ const Hero = () => {
           Wedding film Editing Firm for wedding filmmakers
         </h1>
         <p className="text-white text-lg md:text-2xl eb-regular">
-          Leading Wedding Video Editing Company
+          TURNING YOUR RAW FOOTAGE INTO TIMESS FOLKTALES
         </p>
 
         {/* CTA Buttons */}
