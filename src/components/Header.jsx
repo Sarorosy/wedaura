@@ -37,7 +37,7 @@ const Header = () => {
               }}
               className="hover:text-darkBrown transition"
             >
-              {link}
+              {link == "About" ? "About us" : link}
             </button>
           ))}
         </nav>
