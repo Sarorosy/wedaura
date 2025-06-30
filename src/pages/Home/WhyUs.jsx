@@ -5,7 +5,7 @@ import { CheckCircle } from "lucide-react";
 const points = [
   "Every video editor on the team has at least five years of experience editing or shooting wedding videos.",
   "7 – 15 days turnaround per project.",
-  "Our team of 4 wedding video editors and three managers is based in New Delhi, India.",
+  "Our team of 4 wedding video editors and one manager is based in New Delhi, India.",
   "Over the course of the studio’s existence, we’ve edited over 500 wedding videos.",
   "Fast customer service and daily communication – a team member is available 6 days a week via mail and phone.",
   "We’ve built strong relationships with dozens of satisfied customers in the US, UK, Canada, and Australia.",
@@ -26,8 +26,8 @@ export default function WhyUs() {
             Why Us
           </h2>
           <p className="max-w-2xl mx-auto text-base text-secondary italic">
-            Several features set us apart from what the competition has to offer.
-            Here’s why you should consider partnering up with us.
+            Several features set us apart from what the competition has to
+            offer. Here’s why you should consider partnering up with us.
           </p>
         </motion.div>
 
@@ -42,9 +42,7 @@ export default function WhyUs() {
               viewport={{ once: true }}
             >
               <CheckCircle className="text-olive mt-1 w-5 h-5 shrink-0" />
-              <p className="text-sm text-primary leading-relaxed">
-                {point}
-              </p>
+              <p className="text-sm text-primary leading-relaxed">{point}</p>
             </motion.div>
           ))}
         </div>
