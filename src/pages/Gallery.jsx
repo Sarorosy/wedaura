@@ -3,89 +3,44 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, PlayCircle } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import one from "../assets/gallery/1.jpg";
-import two from "../assets/gallery/2.jpg";
-import three from "../assets/gallery/3.jpg";
-import four from "../assets/gallery/4.jpg";
-import five from "../assets/gallery/5.jpg";
-import six from "../assets/gallery/6.jpg";
-import seven from "../assets/gallery/7.jpg";
-import eight from "../assets/gallery/8.jpg";
+import { useNavigate } from "react-router-dom";
 
-const weddingHighlights = [
-  {
-    title: "Chris Jade Highlights",
-    duration: "04:40",
-    thumbnail: one,
-    videoUrl: "https://player.vimeo.com/video/235390726",
-  },
-  {
-    title: "Yan & Jason Highlights",
-    duration: "05:07",
-    thumbnail: two,
-    videoUrl: "https://player.vimeo.com/video/235390726",
-  },
-  {
-    title: "Sydney and Connor Highlights",
-    duration: "07:46",
-    thumbnail: three,
-    videoUrl: "https://player.vimeo.com/video/235390726",
-  },
-  {
-    title: "Sanjay and Rochele Highlights",
-    duration: "07:42",
-    thumbnail: four,
-    videoUrl: "https://player.vimeo.com/video/235390726",
-  },
+const youtubeVideos = [
+  "vdQ9uE4o75E",
+  "k-hL4ZQs9Qs",
+  "RTo696CMxdw",
+  "dHUafJjSb2A",
+  "4ClwQoxYu0o",
+  "1xrcchIhb3s",
 ];
 
-const weddingShortFilms = [
-  {
-    title: "Ethan & Bella Short Film",
-    duration: "06:30",
-    thumbnail: five,
-    videoUrl: "https://player.vimeo.com/video/235390726",
-  },
-  {
-    title: "Lucas & Emma Short Film",
-    duration: "08:15",
-    thumbnail: six,
-    videoUrl: "https://player.vimeo.com/video/235390726",
-  },
-  {
-    title: "Noah & Ava Short Film",
-    duration: "05:55",
-    thumbnail: seven,
-    videoUrl: "https://player.vimeo.com/video/235390726",
-  },
-  {
-    title: "Liam & Olivia Short Film",
-    duration: eight,
-    thumbnail: eight,
-    videoUrl: "https://player.vimeo.com/video/235390726",
-  },
-];
+const generateGalleryItems = (ids) =>
+  ids.map((id, index) => ({
+    title: `Video ${index + 1}`,
+    thumbnail: `https://img.youtube.com/vi/${id}/maxresdefault.jpg`,
+    videoUrl: `https://www.youtube.com/embed/${id}`,
+  }));
+
+const weddingHighlights = generateGalleryItems(youtubeVideos);
 
 const GallerySection = ({ title, items, onVideoClick }) => (
   <div className="mb-16">
-    <h2 className="text-center text-3xl font-serifStyle text-primary mb-6">{title}</h2>
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 px-4">
       {items.map((item, idx) => (
         <div
           key={idx}
-          className="relative bg-accent group cursor-pointer rounded overflow-hidden shadow-md"
+          className="relative bg-accent group cursor-pointer rounded overflow-hidden shadow-md border border-darkBrown"
           onClick={() => onVideoClick(item.videoUrl)}
         >
           <img
             src={item.thumbnail}
             alt={item.title}
-            className="w-full h-auto  transition-transform duration-300"
+            className="w-full h-auto transition-transform duration-300"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
             <PlayCircle className="text-white w-14 h-14" />
           </div>
           
-          <p className="mt-2 text-center font-serifStyle text-darkBrown text-lg">{item.title}</p>
         </div>
       ))}
     </div>
@@ -94,6 +49,7 @@ const GallerySection = ({ title, items, onVideoClick }) => (
 
 const Gallery = () => {
   const [videoUrl, setVideoUrl] = useState(null);
+  const navigate = useNavigate();
 
   return (
     <div className="bg-pastel min-h-screen">
@@ -107,19 +63,15 @@ const Gallery = () => {
           items={weddingHighlights}
           onVideoClick={setVideoUrl}
         />
-        <GallerySection
-          title="Wedding Short Films"
-          items={weddingShortFilms}
-          onVideoClick={setVideoUrl}
-        />
+        
 
         <div className="text-center mt-10">
-          <a
-            href="/contact"
+          <button
+           onClick={()=>{navigate('/contact')}}
             className="bg-secondary text-accent px-6 py-3 rounded-md hover:bg-primary transition-all text-lg"
           >
             Get Quote →
-          </a>
+          </button>
         </div>
 
         <AnimatePresence>
@@ -139,9 +91,9 @@ const Gallery = () => {
                 </button>
                 <div className="relative" style={{ paddingTop: "56.25%" }}>
                   <iframe
-                    src={`${videoUrl}?autoplay=1&title=0&byline=0&portrait=0`}
+                    src={`${videoUrl}?autoplay=1&modestbranding=1&rel=0`}
                     frameBorder="0"
-                    allow="autoplay; fullscreen; picture-in-picture"
+                    allow="autoplay; fullscreen"
                     allowFullScreen
                     className="absolute top-0 left-0 w-full h-full rounded-lg"
                     title="Wedding Video"
