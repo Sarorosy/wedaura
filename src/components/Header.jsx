@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Gift, Mail, Menu, MessageCircle, X } from "lucide-react";
+import { Facebook, Gift, Instagram, Mail, Menu, MessageCircle, X, Youtube } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import FolkLore from "../assets/Folklore-logo.png";
@@ -44,6 +44,18 @@ const Header = () => {
           ))}
         </nav>
 
+        <div className="hidden md:flex space-x-5">
+          <a href="https://instagram.com" target="_blank" rel="noreferrer">
+            <Instagram className="text-darkbrown hover:opacity-80" size={20} />
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noreferrer">
+            <Youtube className="text-darkbrown hover:opacity-80" size={20} />
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noreferrer">
+            <Facebook className="text-darkbrown hover:opacity-80" size={20} />
+          </a>
+        </div>
+
         {/* Burger Icon */}
         <div className="md:hidden">
           <button onClick={() => setIsOpen(true)}>
@@ -83,6 +95,17 @@ const Header = () => {
                   </button>
                 ))}
               </nav>
+              <div className="flex justify-center mx-auto space-x-3">
+          <a href="https://instagram.com" target="_blank" rel="noreferrer">
+            <Instagram className="text-accent hover:opacity-80" size={20} />
+          </a>
+          <a href="https://youtube.com" target="_blank" rel="noreferrer">
+            <Youtube className="text-accent hover:opacity-80" size={20} />
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noreferrer">
+            <Facebook className="text-accent hover:opacity-80" size={20} />
+          </a>
+        </div>
             </motion.div>
           )}
         </AnimatePresence>
