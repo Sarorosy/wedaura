@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, Star } from "lucide-react";
 
 const faqs = [
   {
@@ -71,6 +71,33 @@ const faqs = [
   },
 ];
 
+const testimonials = [
+  {
+    name: "Sarah & Michael Chen",
+    image:
+      "https://img.freepik.com/free-photo/couple-with-lollipop_23-2148011860.jpg?uid=R103194381&ga=GA1.1.289768406.1747801732&semt=ais_hybrid&w=740",
+    text: "Folklore transformed our wedding footage into pure magic! The cinematic quality and attention to detail exceeded all our expectations. We've watched our video dozens of times and still get emotional every single time.",
+    rating: 5,
+    location: "San Francisco, CA",
+  },
+  {
+    name: "Emma & David Johnson",
+    image:
+      "https://img.freepik.com/free-photo/smiling-young-woman-man-showing-heart-by-hands_23-2148020225.jpg?uid=R103194381&ga=GA1.1.289768406.1747801732&semt=ais_hybrid&w=740",
+    text: "From start to finish, Folklore was incredible to work with. They captured moments we didn't even know happened and turned them into a beautiful story. The color grading is absolutely stunning!",
+    rating: 5,
+    location: "Austin, TX",
+  },
+  {
+    name: "Priya & Raj Patel",
+    image:
+      "https://img.freepik.com/free-photo/smiling-couple-holding-each-other-s-hand-standing-against-blue-sky_23-2148103056.jpg?uid=R103194381&ga=GA1.1.289768406.1747801732&semt=ais_hybrid&w=740",
+    text: "Folklore perfectly captured the essence of our multicultural wedding. They understood our vision and delivered a masterpiece that beautifully blends both our traditions. Simply phenomenal work!",
+    rating: 5,
+    location: "Los Angeles, CA",
+  },
+];
+
 export default function Faq() {
   const [openIndex, setOpenIndex] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState("primary");
@@ -82,102 +109,150 @@ export default function Faq() {
   const filteredFaqs = faqs.filter((faq) => faq.category === selectedCategory);
 
   return (
-    <section className="py-16 px-4 md:px-10 text-primary bg-transparent">
-      <div className="max-w-5xl mx-auto">
-        <motion.h2
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-serifStyle text-center text-darkBrown mb-6"
-        >
-          Frequently Asked Questions
-        </motion.h2>
-
-        {/* Category Tabs */}
-        <div className="flex gap-4 mb-10 justify-start">
-          <button
-            onClick={() => {
-              setSelectedCategory("primary");
-              setOpenIndex(null);
-            }}
-            className={`px-5 py-2 rounded-full text-sm font-semibold border ${
-              selectedCategory === "primary"
-                ? "bg-darkBrown text-white"
-                : "bg-white text-darkBrown border-darkBrown"
-            } transition`}
+    <>
+      <section className="py-16 px-4 md:px-10 text-primary bg-transparent">
+        <div className="max-w-5xl mx-auto">
+          <motion.h2
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-serifStyle text-center text-darkBrown mb-6"
           >
-            Primary
-          </button>
-          <button
-            onClick={() => {
-              setSelectedCategory("general");
-              setOpenIndex(null);
-            }}
-            className={`px-5 py-2 rounded-full text-sm font-semibold border ${
-              selectedCategory === "general"
-                ? "bg-darkBrown text-white"
-                : "bg-white text-darkBrown border-darkBrown"
-            } transition`}
-          >
-            General
-          </button>
-        </div>
+            Frequently Asked Questions
+          </motion.h2>
 
-        <div className="space-y-6">
-          {filteredFaqs.map((faq, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
-              className="border-b border-darkBrown transition-all"
+          {/* Category Tabs */}
+          <div className="flex gap-4 mb-10 justify-start">
+            <button
+              onClick={() => {
+                setSelectedCategory("primary");
+                setOpenIndex(null);
+              }}
+              className={`px-5 py-2 rounded-full text-sm font-semibold border ${
+                selectedCategory === "primary"
+                  ? "bg-darkBrown text-white"
+                  : "bg-white text-darkBrown border-darkBrown"
+              } transition`}
             >
-              <button
-                onClick={() => toggle(index)}
-                className="w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-lg md:text-xl text-primary hover:text-secondary transition-colors"
+              Primary
+            </button>
+            <button
+              onClick={() => {
+                setSelectedCategory("general");
+                setOpenIndex(null);
+              }}
+              className={`px-5 py-2 rounded-full text-sm font-semibold border ${
+                selectedCategory === "general"
+                  ? "bg-darkBrown text-white"
+                  : "bg-white text-darkBrown border-darkBrown"
+              } transition`}
+            >
+              General
+            </button>
+          </div>
+
+          <div className="space-y-6">
+            {filteredFaqs.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                className="border-b border-darkBrown transition-all"
               >
-                <span>{faq.question}</span>
-                {openIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-secondary" />
-                ) : (
-                  <ChevronDown className="w-5 h-5 text-darkBrown" />
-                )}
-              </button>
+                <button
+                  onClick={() => toggle(index)}
+                  className="w-full flex items-center justify-between px-6 py-5 text-left font-semibold text-lg md:text-xl text-primary hover:text-secondary transition-colors"
+                >
+                  <span>{faq.question}</span>
+                  {openIndex === index ? (
+                    <ChevronUp className="w-5 h-5 text-secondary" />
+                  ) : (
+                    <ChevronDown className="w-5 h-5 text-darkBrown" />
+                  )}
+                </button>
 
-              <AnimatePresence>
-                {openIndex === index && (
-                  <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
-                    className="px-6 pb-5 text-sm md:text-base text-darkBrown leading-relaxed"
-                  >
-                    {faq.answer}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
-          ))}
-        </div>
+                <AnimatePresence>
+                  {openIndex === index && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="px-6 pb-5 text-sm md:text-base text-darkBrown leading-relaxed"
+                    >
+                      {faq.answer}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            ))}
+          </div>
 
-        <motion.div
-          className="mt-16 text-center"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-        >
-          <p className="text-xl font-semibold text-darkBrown mb-4">
-            Make your own customized package today!
-          </p>
-          <a
-            href="#"
-            className="inline-block bg-primary text-accent px-6 py-3 rounded-full shadow-md hover:bg-secondary transition"
+          <motion.div
+            className="mt-16 text-center"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
           >
-            Get a free quote today!
-          </a>
-        </motion.div>
-      </div>
-    </section>
+            <p className="text-xl font-semibold text-darkBrown mb-4">
+              Make your own customized package today!
+            </p>
+            <a
+              href="#"
+              className="inline-block bg-primary text-accent px-6 py-3 rounded-full shadow-md hover:bg-secondary transition"
+            >
+              Get a free quote today!
+            </a>
+          </motion.div>
+        </div>
+      </section>
+      <section className="py-20 px-4 bg-gradient-to-br from-secondary/10 to-accent/20">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-romantica text-primary mb-6">
+              Love Stories from Our Couples
+            </h2>
+            <div className="w-20 h-1 bg-secondary mx-auto mb-8"></div>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <div className="flex items-center mb-6">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-16 h-16 rounded-full object-cover mr-4"
+                  />
+                  <div>
+                    <h4 className="font-serifStyle text-primary text-lg">
+                      {testimonial.name}
+                    </h4>
+                    <p className="text-primary/60 text-sm">
+                      {testimonial.location}
+                    </p>
+                    <div className="flex space-x-1 mt-1">
+                      {[...Array(testimonial.rating)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className="w-4 h-4 fill-accent text-accent"
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                <p className="text-primary/80 leading-relaxed italic">
+                  "{testimonial.text}"
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

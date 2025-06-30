@@ -8,7 +8,7 @@ const stats = [
   { value: 5000, suffix: "+", label: "Projects" },
   { value: 2000, suffix: "TB", label: "Of Footage Edited" },
   { value: 10, suffix: "", label: "Countries World Wide" },
-  { value: 40, suffix: "", label: "Team Members" },
+  { value: 5, suffix: "", label: "Team Members" },
 ];
 
 const Numbers = () => {

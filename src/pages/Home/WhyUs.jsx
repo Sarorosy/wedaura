@@ -4,11 +4,10 @@ import { CheckCircle } from "lucide-react";
 
 const points = [
   "Every video editor on the team has at least five years of experience editing or shooting wedding videos.",
-  "7 – 30 days turnaround per project.",
-  "Our team of 15 wedding video editors and three managers is based in London and Berlin.",
+  "7 – 15 days turnaround per project.",
+  "Our team of 4 wedding video editors and three managers is based in New Delhi, India.",
   "Over the course of the studio’s existence, we’ve edited over 500 wedding videos.",
-  "Fast customer service and daily communication – a team member is available 5 days a week via mail and phone.",
-  "We use professional video editing and post-production software to ensure a stellar outcome every single time.",
+  "Fast customer service and daily communication – a team member is available 6 days a week via mail and phone.",
   "We’ve built strong relationships with dozens of satisfied customers in the US, UK, Canada, and Australia.",
 ];
 
