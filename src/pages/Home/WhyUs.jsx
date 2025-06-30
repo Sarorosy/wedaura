@@ -7,7 +7,7 @@ const points = [
   "7 – 15 days turnaround per project.",
   "Our team of 4 wedding video editors and one manager is based in New Delhi, India.",
   "Over the course of the studio’s existence, we’ve edited over 500 wedding videos.",
-  "Fast customer service and daily communication – a team member is available 6 days a week via mail and phone.",
+  "Fast customer service and daily communication – a team leader is available 6 days a week via mail and phone.",
   "We’ve built strong relationships with dozens of satisfied customers in the US, UK, Canada, and Australia.",
 ];
 
