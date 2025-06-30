@@ -4,6 +4,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import FolkLore from '../assets/Folklore-logo.png';
 
+import { FloatingWhatsApp } from 'react-floating-whatsapp'
+// import 'react-floating-whatsapp/dist/index.css'
+
 const navLinks = ["Gallery", "About", "Contact"];
 
 const Header = () => {
@@ -92,6 +95,18 @@ const Header = () => {
         <span className="flex items-center text-accent"><Mail size={28} className="bg-gray-300 p-1 rounded-full text-black mr-1" /> Mail us: <a href="mailto:contact@folklore.com" class=" font-medium">contact@folklore.com</a></span>
       </div>
 
+          <FloatingWhatsApp
+        phoneNumber="917011584331" // Replace with your number without + or spaces
+        accountName="Folklore Weddings"
+        avatar={FolkLore} // Place logo inside public/ folder
+        statusMessage="Typically replies in minutes"
+        chatMessage="Hi 👋! How can we help with your wedding film?"
+        placeholder="Type your message here..."
+        allowClickAway
+        notification
+        notificationSound
+        darkMode={false}
+      />
     </>
   );
 };
