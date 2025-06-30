@@ -91,6 +91,14 @@ const About = () => {
     }
   ];
 
+   const features = [
+    { text: "10+ Years of Experience" },
+    { text: "Passion for Storytelling" },
+    { text: "We Match Your Style" },
+    { text: "On-time Delivery" },
+  ];
+
+
   return (
     <>
     <Header />
@@ -146,51 +154,55 @@ const About = () => {
       {/* About Us Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-8">
             <h2 className="text-4xl md:text-5xl font-romantica text-primary mb-6">
               About Folklore
             </h2>
             <div className="w-20 h-1 bg-secondary mx-auto mb-8"></div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
-            <div className="space-y-6">
-              <p className="text-lg text-primary leading-relaxed font-serifStyle">
-                At Folklore, we operate as a close-knit, highly skilled team, dedicated to delivering exceptional wedding videography. We're your creative partners, ready to turn your love story into a captivating cinematic reality.
-              </p>
-              <p className="text-lg text-primary leading-relaxed font-serifStyle">
-                We believe that every wedding video has the potential to be a cinematic masterpiece. That's why we are committed to helping couples achieve their vision and create videos that are both visually stunning and emotionally engaging.
-              </p>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-secondary" />
-                  <span className="text-primary font-serifStyle">10+ Years of Experience</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-secondary" />
-                  <span className="text-primary font-serifStyle">Passion for Storytelling</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-secondary" />
-                  <span className="text-primary font-serifStyle">We Match Your Style</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-secondary" />
-                  <span className="text-primary font-serifStyle">On-time Delivery</span>
-                </div>
-              </div>
+          <section className="px-6 md:px-10 py-4 bg-pastel flex justify-center items-center">
+      <div className="max-w-5xl w-full space-y-14 text-center">
+        {/* Main Intro */}
+        <div className="space-y-6">
+          <h2 className="text-3xl md:text-4xl font-serifStyle text-primary">
+            Your Love Story, Cinematically Told
+          </h2>
+          <p className="text-lg text-primary leading-relaxed eb-regular">
+            At Folklore, we believe every wedding is a story waiting to be told — beautifully, emotionally, and timelessly. We specialize in cinematic wedding video editing that transforms raw footage into unforgettable memories.
+          </p>
+          <p className="text-lg text-primary leading-relaxed eb-regular">
+            With a passionate team of creative editors, we blend storytelling, music, and visual finesse to craft wedding films that not only capture the day but relive the emotion. From traditional ceremonies to modern celebrations, we deliver edits with soul and style.
+          </p>
+          <p className="text-lg text-primary leading-relaxed eb-regular">
+            Whether it's a highlight reel, a full-length wedding film, or social media teasers — we ensure each frame feels magical. Your memories deserve more than just footage — they deserve to be remembered beautifully.
+          </p>
+        </div>
+
+        {/* Secondary Content */}
+        <div className="space-y-3">
+          <p className="text-lg text-primary leading-relaxed eb-regular">
+            We operate as a close-knit, highly skilled team, dedicated to turning your wedding footage into timeless films. We’re your creative partners in crafting emotional and visually rich cinematic stories.
+          </p>
+          <p className="text-lg text-primary leading-relaxed eb-regular">
+            Every love story deserves to be told with beauty and soul. Let’s make yours unforgettable.
+          </p>
+        </div>
+
+        {/* Features Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 pt-4">
+          {features.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-xl shadow-md p-5 flex flex-col items-center justify-center text-center transition hover:shadow-lg"
+            >
+              <CheckCircle className="w-6 h-6 text-secondary mb-3" />
+              <p className="text-primary font-serifStyle text-base">{item.text}</p>
             </div>
-            <div className="relative flex items-end justify-end">
-              <img 
-                src={ab}
-                alt="Wedding videography" 
-                className="rounded-2xl shadow-2xl max-h-96 " 
-              />
-              <div className="absolute -bottom-6 -right-6 bg-accent p-6 rounded-xl shadow-lg">
-                <Play className="w-12 h-12 text-primary" />
-              </div>
-            </div>
-          </div>
+          ))}
+        </div>
+      </div>
+    </section>
         </div>
       </section>
 

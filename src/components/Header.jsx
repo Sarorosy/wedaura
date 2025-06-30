@@ -87,7 +87,7 @@ const Header = () => {
 
       </header>
       <div class="flex flex-col md:flex-row justify-around items-center text-sm md:text-base bg-darkBrown py-2 px-4 gap-2 md:gap-0">
-        <span className="flex items-center text-accent"><MessageCircle size={28} className="bg-gray-300 p-1 rounded-full text-black mr-1" /> Whatsapp us: <a href="https://wa.me/919315028442" class=" font-medium">+91 9315028442</a></span>
+        <span className="flex items-center text-accent"><MessageCircle size={28} className="bg-gray-300 p-1 rounded-full text-black mr-1" /> Whatsapp us: <a href="https://wa.me/917011584331" class=" font-medium">+91 7011584331</a></span>
         <span className="hidden md:flex items-center text-accent"><Gift size={28} className="bg-gray-300 p-1 rounded-full text-black mr-1" /> Get flat 10% off on your first project</span>
         <span className="flex items-center text-accent"><Mail size={28} className="bg-gray-300 p-1 rounded-full text-black mr-1" /> Mail us: <a href="mailto:contact@folklore.com" class=" font-medium">contact@folklore.com</a></span>
       </div>
