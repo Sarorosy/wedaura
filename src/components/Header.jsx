@@ -97,7 +97,7 @@ const Header = () => {
 
           <FloatingWhatsApp
         phoneNumber="917011584331" // Replace with your number without + or spaces
-        accountName="Folklore Weddings"
+        accountName="Folklore Productions"
         avatar={FolkLore} // Place logo inside public/ folder
         statusMessage="Typically replies in minutes"
         chatMessage="Hi 👋! How can we help with your wedding film?"
