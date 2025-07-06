@@ -157,7 +157,6 @@ export default function WhyUs() {
       <Header />
       <FloatingParticles />
 
-      {/* Hero Section with Complex Visual Elements */}
       <motion.div
         className="relative h-screen flex items-center justify-center overflow-hidden"
         style={{
@@ -389,9 +388,7 @@ export default function WhyUs() {
       </motion.div>
 
       <div className="relative bg-gradient-to-b from-gray-50 to-white">
-        {/* Main Content */}
         <div className="px-6 py-20 md:px-20 space-y-32">
-          {/* Why Us Section */}
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
