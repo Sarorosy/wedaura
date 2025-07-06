@@ -7,7 +7,7 @@ import FolkLore from "../assets/Folklore-logo.png";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 // import 'react-floating-whatsapp/dist/index.css'
 
-const navLinks = ["Gallery", "About", "Contact"];
+const navLinks = ["About","Gallery","WhyUs", "Contact"];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,7 +39,7 @@ const Header = () => {
               }}
               className="hover:text-darkBrown transition"
             >
-              {link == "About" ? "About us" : link}
+              {link == "About" ? "About us" : link == "WhyUs" ? "Why Us" : link}
             </button>
           ))}
         </nav>

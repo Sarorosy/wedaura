@@ -19,6 +19,7 @@ import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
 import ScrollToTop from './components/ScrollToTop'
 import About from './pages/About'
+import WhyUs from './pages/WhyUs'
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          <Route path="/whyUs" element={<WhyUs />} />
         </Routes>
       </Router>
 
