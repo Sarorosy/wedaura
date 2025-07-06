@@ -40,10 +40,10 @@ export default function Footer() {
 
         {/* Right: Social Icons */}
         <div className="flex space-x-5">
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">
+          <a href="https://www.instagram.com/folkloreproductions_" target="_blank" rel="noreferrer">
             <Instagram className="text-[#D9C5AD] hover:opacity-80" size={20} />
           </a>
-          <a href="https://youtube.com" target="_blank" rel="noreferrer">
+          <a href="https://www.youtube.com/channel/UC2kgNgYUK7z91b8M6CPhomw/posts?pvf=CAI%253D" target="_blank" rel="noreferrer">
             <Youtube className="text-[#D9C5AD] hover:opacity-80" size={20} />
           </a>
           <a href="https://facebook.com" target="_blank" rel="noreferrer">
@@ -54,7 +54,7 @@ export default function Footer() {
 
       {/* Bottom text */}
       <div className="text-center text-xs text-[#8b9c8e] mt-6">
-        © 2023 Folklore | <a href="/privacy-policy" className="underline">Privacy Policy</a>
+        © 2023 Folklore | <a href="#" className="underline">Privacy Policy</a>
       </div>
     </footer>
   );

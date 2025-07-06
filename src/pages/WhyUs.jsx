@@ -602,6 +602,19 @@ export default function WhyUs() {
                   className={`p-3 bg-white/10 rounded-full backdrop-blur-sm cursor-pointer transition-all duration-300 ${color}`}
                   whileHover={{ scale: 1.2, rotate: 10 }}
                   whileTap={{ scale: 0.9 }}
+                  onClick={() => {
+                    if (Icon === Phone) {
+                      window.location.href = "tel:+917011584331";
+                    } else if (Icon === Mail) {
+                      window.location.href = "mailto:contact@folklore.com";
+                    } else if (Icon === Instagram) {
+                      window.open(
+                        "https://www.instagram.com/folkloreproductions_",
+                        "_blank"
+                      );
+                    }
+                  }}
+
                 >
                   <Icon size={24} />
                 </motion.div>

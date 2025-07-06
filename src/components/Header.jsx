@@ -3,11 +3,10 @@ import { Facebook, Gift, Instagram, Mail, Menu, MessageCircle, X, Youtube } from
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import FolkLore from "../assets/Folklore-logo.png";
-
 import { FloatingWhatsApp } from "react-floating-whatsapp";
-// import 'react-floating-whatsapp/dist/index.css'
 
-const navLinks = ["About","Gallery","WhyUs", "Contact"];
+const navLinksLeft = ["About", "Gallery"];
+const navLinksRight = ["WhyUs", "Contact"];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,48 +14,59 @@ const Header = () => {
 
   return (
     <>
-      <header className=" w-full z-50 bg-white py-4 px-6 md:px-10 flex justify-between items-center">
-        {/* Logo */}
-        <div
-          onClick={() => navigate("/")}
-          className=" itali cursor-pointer transition-all flex items-center"
-        >
-          <img src={FolkLore} alt="Folklore Logo" className="h-10 md:h-20" />
-          <div className="">
-            <h2 className="noto text-3xl md:text-4xl font-medium">FOLKLORE</h2>
-            <h3 className="noto text-2xl md:text-3xl ">PRODUCTIONS</h3>
-            {/* <small className="font-sans text-[12px]">TURNING YOUR RAW FOOTAGE INTO TIMESS FOLKTALES</small> */}
-          </div>
-        </div>
-
-        {/* Desktop Navigation */}
+      <header className="w-full z-50 bg-white py-4 px-6 md:px-10 flex justify-between items-center">
+        {/* Left Navigation */}
         <nav className="hidden md:flex space-x-6 text-md font-semibold eb">
-          {navLinks.map((link, idx) => (
+          {navLinksLeft.map((link, idx) => (
             <button
               key={idx}
-              onClick={() => {
-                navigate(`/${link.toLowerCase()}`);
-              }}
+              onClick={() => navigate(`/${link.toLowerCase()}`)}
               className="hover:text-darkBrown transition"
             >
-              {link == "About" ? "About us" : link == "WhyUs" ? "Why Us" : link}
+              {link === "About" ? "About us" : link}
             </button>
           ))}
         </nav>
 
-        <div className="hidden md:flex space-x-5">
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">
-            <Instagram className="text-darkbrown hover:opacity-80" size={20} />
-          </a>
-          <a href="https://youtube.com" target="_blank" rel="noreferrer">
-            <Youtube className="text-darkbrown hover:opacity-80" size={20} />
-          </a>
-          <a href="https://facebook.com" target="_blank" rel="noreferrer">
-            <Facebook className="text-darkbrown hover:opacity-80" size={20} />
-          </a>
+        {/* Logo Center */}
+        <div
+          onClick={() => navigate("/")}
+          className="cursor-pointer flex  items-center justify-center text-center"
+        >
+          <img src={FolkLore} alt="Folklore Logo" className="h-10 md:h-20" />
+          <div>
+            <h2 className="noto text-3xl md:text-4xl font-medium">FOLKLORE</h2>
+            <h3 className="noto text-2xl md:text-3xl">PRODUCTIONS</h3>
+          </div>
         </div>
 
-        {/* Burger Icon */}
+        {/* Right Navigation */}
+        <div className="hidden md:flex items-center space-x-6">
+          {navLinksRight.map((link, idx) => (
+            <button
+              key={idx}
+              onClick={() => navigate(`/${link.toLowerCase()}`)}
+              className="hover:text-darkBrown transition font-semibold eb-regular"
+            >
+              {link === "WhyUs" ? "Why Us" : link}
+            </button>
+          ))}
+
+          {/* Social Icons */}
+          <div className="flex space-x-4">
+            <a href="https://www.instagram.com/folkloreproductions_" target="_blank" rel="noreferrer">
+              <Instagram className="text-darkbrown hover:opacity-80" size={20} />
+            </a>
+            <a href="https://www.youtube.com/channel/UC2kgNgYUK7z91b8M6CPhomw" target="_blank" rel="noreferrer">
+              <Youtube className="text-darkbrown hover:opacity-80" size={20} />
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noreferrer">
+              <Facebook className="text-darkbrown hover:opacity-80" size={20} />
+            </a>
+          </div>
+        </div>
+
+        {/* Burger Icon for Mobile */}
         <div className="md:hidden">
           <button onClick={() => setIsOpen(true)}>
             <Menu size={28} />
@@ -80,9 +90,9 @@ const Header = () => {
                 </button>
               </div>
 
-              {/* Links */}
+              {/* Mobile Nav Links */}
               <nav className="flex flex-col gap-4 mt-6 text-lg font-medium">
-                {navLinks.map((link, idx) => (
+                {[...navLinksLeft, ...navLinksRight].map((link, idx) => (
                   <button
                     key={idx}
                     onClick={() => {
@@ -91,59 +101,55 @@ const Header = () => {
                     }}
                     className="text-accent transition"
                   >
-                    {link}
+                    {link === "About" ? "About us" : link === "WhyUs" ? "Why Us" : link}
                   </button>
                 ))}
               </nav>
+
+              {/* Social Icons */}
               <div className="flex justify-center mx-auto space-x-3">
-          <a href="https://instagram.com" target="_blank" rel="noreferrer">
-            <Instagram className="text-accent hover:opacity-80" size={20} />
-          </a>
-          <a href="https://youtube.com" target="_blank" rel="noreferrer">
-            <Youtube className="text-accent hover:opacity-80" size={20} />
-          </a>
-          <a href="https://facebook.com" target="_blank" rel="noreferrer">
-            <Facebook className="text-accent hover:opacity-80" size={20} />
-          </a>
-        </div>
+                <a href="https://instagram.com" target="_blank" rel="noreferrer">
+                  <Instagram className="text-accent hover:opacity-80" size={20} />
+                </a>
+                <a href="https://youtube.com" target="_blank" rel="noreferrer">
+                  <Youtube className="text-accent hover:opacity-80" size={20} />
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noreferrer">
+                  <Facebook className="text-accent hover:opacity-80" size={20} />
+                </a>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
       </header>
-      <div class="flex flex-col md:flex-row justify-around items-center text-sm md:text-base bg-darkBrown py-2 px-4 gap-2 md:gap-0">
+
+      {/* Contact Info Bar */}
+      <div className="flex flex-col md:flex-row justify-around items-center text-sm md:text-base bg-darkBrown py-2 px-4 gap-2 md:gap-0">
         <span className="flex items-center text-accent">
-          <MessageCircle
-            size={28}
-            className="bg-gray-300 p-1 rounded-full text-black mr-1"
-          />{" "}
+          <MessageCircle size={28} className="bg-gray-300 p-1 rounded-full text-black mr-1" />{" "}
           Whatsapp us:{" "}
-          <a href="https://wa.me/917011584331" class=" font-medium">
+          <a href="https://wa.me/917011584331" className="font-medium">
             +91 7011584331
           </a>
         </span>
         <span className="hidden md:flex items-center text-accent">
-          <Gift
-            size={28}
-            className="bg-gray-300 p-1 rounded-full text-black mr-1"
-          />{" "}
+          <Gift size={28} className="bg-gray-300 p-1 rounded-full text-black mr-1" />{" "}
           Get flat 10% off on your first project
         </span>
         <span className="flex items-center text-accent">
-          <Mail
-            size={28}
-            className="bg-gray-300 p-1 rounded-full text-black mr-1"
-          />{" "}
+          <Mail size={28} className="bg-gray-300 p-1 rounded-full text-black mr-1" />{" "}
           Mail us:{" "}
-          <a href="mailto:contact@folklore.com" class=" font-medium">
+          <a href="mailto:contact@folklore.com" className="font-medium">
             contact@folklore.com
           </a>
         </span>
       </div>
 
+      {/* WhatsApp Floating Widget */}
       <FloatingWhatsApp
-        phoneNumber="917011584331" // Replace with your number without + or spaces
+        phoneNumber="917011584331"
         accountName="Folklore Productions"
-        avatar={FolkLore} // Place logo inside public/ folder
+        avatar={FolkLore}
         statusMessage="Typically replies in minutes"
         chatMessage="Hi 👋! How can we help with your wedding film?"
         placeholder="Type your message here..."

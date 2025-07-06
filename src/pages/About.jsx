@@ -157,7 +157,6 @@ const About = () => {
       instagram: "https://www.instagram.com/imeditorkapil/",
       instagramHandle: "@imeditorkapil",
     },
-    
   ];
 
   return (
@@ -165,101 +164,111 @@ const About = () => {
       <Header />
       <div className="min-h-screen bg-pastel overflow-x-hidden">
         <section className="py-20 px-4 bg-slate-50 relative overflow-hidden">
-  {/* Decorative elements */}
-  <div className="absolute top-0 left-0 w-full h-full">
-    <div className="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
-    <div className="absolute bottom-10 right-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl"></div>
-  </div>
+          {/* Decorative elements */}
+          <div className="absolute top-0 left-0 w-full h-full">
+            <div className="absolute top-10 left-10 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-10 right-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl"></div>
+          </div>
 
-  <div className="max-w-6xl mx-auto text-center relative z-10">
-    <h2 className="text-4xl md:text-5xl font-romantica text-darkBrown mb-16 relative">
-      Our Founders
-      <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-accent rounded-full"></div>
-    </h2>
-    
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
-      {founders.map((founder, index) => (
-        <div
-          key={index}
-          className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 ease-out transform hover:-translate-y-2 overflow-hidden"
-        >
-          {/* Card background with subtle pattern */}
-          <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50/50"></div>
-          
-          {/* Hover overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-          
-          {/* Image container with hover effect */}
-          <div className="relative pt-8 pb-4">
-            <div className="relative mx-auto w-40 h-40 group-hover:scale-110 transition-transform duration-500 ease-out">
-              {/* Image shadow/glow */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500 scale-110"></div>
-              
-              {/* Main image */}
-              <img
-                src={founder.image}
-                alt={founder.name}
-                className="relative z-10 w-full h-full rounded-full object-cover border-4 border-white shadow-xl group-hover:border-accent/20 group-hover:rounded-none transition-all duration-500"
-              />
-              
-              {/* Decorative ring */}
-              <div className="absolute inset-0 rounded-full border-2 border-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
-            </div>
-          </div>
-          
-          {/* Content */}
-          <div className="relative z-10 p-8 pt-4">
-            <h3 className="text-2xl font-bold text-darkBrown mb-2 group-hover:text-primary transition-colors duration-300">
-              {founder.name}
-            </h3>
-            
-            <div className="inline-block px-4 py-1 bg-accent text-darkBrown text-sm font-medium rounded-full mb-4 group-hover:bg-accent/20 transition-colors duration-300">
-              {founder.role}
-            </div>
-            
-            <p className="text-gray-600 leading-relaxed mb-6 group-hover:text-gray-700 transition-colors duration-300">
-              {founder.description}
-            </p>
-            
-            {/* Contact info with icons */}
-            <div className="space-y-3">
-              <div className="flex items-center justify-center space-x-2 text-gray-500 group-hover:text-primary transition-colors duration-300">
-                <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center">
-                  <span className="text-xs"><Phone size={16} className="text-blue-600"/></span>
-                </div>
-                <span className="text-sm font-medium">{founder.phone}</span>
-              </div>
-              
-              <div className="flex items-center justify-center space-x-2 text-gray-500 group-hover:text-primary transition-colors duration-300">
-                <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center">
-                  <span className="text-xs"><Mail size={16} className="text-green-600"/></span>
-                </div>
-                <span className="text-sm font-medium">{founder.email}</span>
-              </div>
-              
-              <div className="flex items-center justify-center space-x-2">
-                <div className="w-5 h-5 bg-accent/10 rounded-full flex items-center justify-center">
-                  <span className="text-xs"><Instagram size={16} className="text-pink-600"/></span>
-                </div>
-                <a
-                  href={founder.instagram}
-                  className="text-sm font-medium text-secondary hover:text-darkBrown transition-colors duration-300 hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
+          <div className="max-w-6xl mx-auto text-center relative z-10">
+            <h2 className="text-4xl md:text-5xl font-romantica text-darkBrown mb-16 relative">
+              Our Founders
+              <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-accent rounded-full"></div>
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+              {founders.map((founder, index) => (
+                <div
+                  key={index}
+                  className="group relative bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 ease-out transform hover:-translate-y-2 overflow-hidden"
                 >
-                  {founder.instagramHandle}
-                </a>
-              </div>
+                  {/* Card background with subtle pattern */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white to-gray-50/50"></div>
+
+                  {/* Hover overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+                  {/* Image container with hover effect */}
+                  <div className="relative pt-8 pb-4">
+                    <div className="relative mx-auto w-40 h-40 group-hover:scale-110 transition-transform duration-500 ease-out">
+                      {/* Image shadow/glow */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-xl opacity-0 group-hover:opacity-60 transition-opacity duration-500 scale-110"></div>
+
+                      {/* Main image */}
+                      <img
+                        src={founder.image}
+                        alt={founder.name}
+                        className="relative z-10 w-full h-full rounded-full object-cover border-4 border-white shadow-xl group-hover:border-accent/20 group-hover:rounded-none transition-all duration-500"
+                      />
+
+                      {/* Decorative ring */}
+                      <div className="absolute inset-0 rounded-full border-2 border-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="relative z-10 p-8 pt-4">
+                    <h3 className="text-2xl font-bold text-darkBrown mb-2 group-hover:text-primary transition-colors duration-300">
+                      {founder.name}
+                    </h3>
+
+                    <div className="inline-block px-4 py-1 bg-accent text-darkBrown text-sm font-medium rounded-full mb-4 group-hover:bg-accent/20 transition-colors duration-300">
+                      {founder.role}
+                    </div>
+
+                    <p className="text-gray-600 leading-relaxed mb-6 group-hover:text-gray-700 transition-colors duration-300">
+                      {founder.description}
+                    </p>
+
+                    {/* Contact info with icons */}
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-center space-x-2 text-gray-500 group-hover:text-primary transition-colors duration-300">
+                        <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center">
+                          <span className="text-xs">
+                            <Phone size={16} className="text-blue-600" />
+                          </span>
+                        </div>
+                        <span className="text-sm font-medium">
+                          {founder.phone}
+                        </span>
+                      </div>
+
+                      <div className="flex items-center justify-center space-x-2 text-gray-500 group-hover:text-primary transition-colors duration-300">
+                        <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center">
+                          <span className="text-xs">
+                            <Mail size={16} className="text-green-600" />
+                          </span>
+                        </div>
+                        <span className="text-sm font-medium">
+                          {founder.email}
+                        </span>
+                      </div>
+
+                      <div className="flex items-center justify-center space-x-2">
+                        <div className="w-5 h-5 bg-accent/10 rounded-full flex items-center justify-center">
+                          <span className="text-xs">
+                            <Instagram size={16} className="text-pink-600" />
+                          </span>
+                        </div>
+                        <a
+                          href={founder.instagram}
+                          className="text-sm font-medium text-secondary hover:text-darkBrown transition-colors duration-300 hover:underline"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {founder.instagramHandle}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Bottom accent line */}
+                  <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                </div>
+              ))}
             </div>
           </div>
-          
-          {/* Bottom accent line */}
-          <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-accent to-secondary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-        </div>
-      ))}
-    </div>
-  </div>
-</section>
+        </section>
 
         {/* About Us Section */}
         <section className="py-20 px-4">
@@ -342,53 +351,6 @@ const About = () => {
           </div>
         </section>
 
-        {/* Testimonials */}
-        <section className="py-20 px-4 bg-gradient-to-br from-secondary/10 to-accent/20">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-romantica text-primary mb-6">
-                Love Stories from Our Couples
-              </h2>
-              <div className="w-20 h-1 bg-secondary mx-auto mb-8"></div>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  <div className="flex items-center mb-6">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-16 h-16 rounded-full object-cover mr-4"
-                    />
-                    <div>
-                      <h4 className="font-serifStyle text-primary text-lg">
-                        {testimonial.name}
-                      </h4>
-                      <p className="text-primary/60 text-sm">
-                        {testimonial.location}
-                      </p>
-                      <div className="flex space-x-1 mt-1">
-                        {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star
-                            key={i}
-                            className="w-4 h-4 fill-accent text-accent"
-                          />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  <p className="text-primary/80 leading-relaxed italic">
-                    "{testimonial.text}"
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-r from-primary to-secondary">
