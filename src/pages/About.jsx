@@ -136,6 +136,17 @@ const About = () => {
 
   const founders = [
     {
+      name: "Kunal Verma",
+      role: "Co-Founder | Public Relations & Editor",
+      image: kunal_verma,
+      description:
+        "I am a self-taught wedding editor with six years of experience collaborating with creative individuals and firms worldwide. Let's connect and collaborate together!",
+      phone: "+91 9315028442",
+      email: "Productionfolklore@gmail.com",
+      instagram: "https://www.instagram.com/kannuverma430/",
+      instagramHandle: "@kannuverma430",
+    },
+    {
       name: "Kapil Moudgil",
       role: "Co-Founder | Operation Head & Editor",
       image: kapil,
@@ -146,17 +157,7 @@ const About = () => {
       instagram: "https://www.instagram.com/imeditorkapil/",
       instagramHandle: "@imeditorkapil",
     },
-    {
-      name: "Kunal Verma",
-      role: "Co-Founder | Public Relations & Editor",
-      image: kunal_verma,
-      description:
-        "I am a self-taught wedding editor with six years of experience collaborating with creative individuals and firms worldwide. Let's connect and collaborate together!",
-      phone: "+91 9315028442",
-      email: "Productionfolklore@gmail.com",
-      instagram: "https://www.instagram.com/kannuverma430/",
-      instagramHandle: "@kannuverma430",
-    }
+    
   ];
 
   return (
