@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 
 const stats = [
   { value: 7, suffix: "", label: "Years of Experience" },
-  { value: 5000, suffix: "+", label: "Projects" },
-  { value: 2000, suffix: "TB", label: "Of Footage Edited" },
+  { value: 1000, suffix: "+", label: "Projects" },
+  { value: 1500, suffix: "TB", label: "Of Footage Edited" },
   { value: 10, suffix: "", label: "Countries World Wide" },
-  { value: 5, suffix: "", label: "Team Members" },
+  { value: 4, suffix: "", label: "Team Members" },
 ];
 
 const Numbers = () => {

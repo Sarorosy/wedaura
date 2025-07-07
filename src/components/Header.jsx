@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 import FolkLore from "../assets/Folklore-logo.png";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 
-const navLinksLeft = ["About", "Gallery"];
-const navLinksRight = ["WhyUs", "Contact"];
+const navLinksLeft = ["Contact", "Gallery"];
+const navLinksRight = ["About", "WhyUs", ];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,7 +48,7 @@ const Header = () => {
               onClick={() => navigate(`/${link.toLowerCase()}`)}
               className="hover:text-darkBrown transition font-semibold eb-regular"
             >
-              {link === "WhyUs" ? "Why Us" : link}
+              {link === "WhyUs" ? "Why Us" : link === "About" ? "About us" : link}
             </button>
           ))}
 
