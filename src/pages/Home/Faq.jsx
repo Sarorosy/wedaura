@@ -7,7 +7,7 @@ const faqs = [
     category: "primary",
     question: "Who are you?",
     answer:
-      "Our team consists of 15 editors and one managers based in New Delhi. Each of the team members has at least five years of experience in outsourcing wedding video editing, post-production or shooting. Since the inception of the studio, we've edited more than 1000 weddings - a noteworthy accomplishment that has resulted in many happy clients.",
+      "Our team consists of 4 editors and one managers based in New Delhi. Each of the team members has at least five years of experience in outsourcing wedding video editing, post-production or shooting. Since the inception of the studio, we've edited more than 1000 weddings - a noteworthy accomplishment that has resulted in many happy clients",
   },
   {
     category: "primary",
