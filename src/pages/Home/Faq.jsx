@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronUp, Star } from "lucide-react";
 
+import grace from '../../assets/grace-events.avif';
+import blissfull from '../../assets/blissful-moments.avif';
+import elegance from '../../assets/elegance.avif';
+
 const faqs = [
   {
     category: "primary",
@@ -73,30 +77,31 @@ const faqs = [
 
 const testimonials = [
   {
-    name: "Sarah & Michael Chen",
+    name: "Grace Events Co.",
     image:
-      "https://img.freepik.com/free-photo/couple-with-lollipop_23-2148011860.jpg?uid=R103194381&ga=GA1.1.289768406.1747801732&semt=ais_hybrid&w=740",
-    text: "Folklore transformed our wedding footage into pure magic! The cinematic quality and attention to detail exceeded all our expectations. We've watched our video dozens of times and still get emotional every single time.",
+      grace,
+    text: "Working with Folklore has elevated the weddings we plan. Their cinematography seamlessly captures every detail we design, creating stunning memories for our clients. Truly professional and creative partners.",
     rating: 5,
     location: "San Francisco, CA",
   },
   {
-    name: "Emma & David Johnson",
+    name: "Blissful Moments Photography",
     image:
-      "https://img.freepik.com/free-photo/smiling-young-woman-man-showing-heart-by-hands_23-2148020225.jpg?uid=R103194381&ga=GA1.1.289768406.1747801732&semt=ais_hybrid&w=740",
-    text: "From start to finish, Folklore was incredible to work with. They captured moments we didn't even know happened and turned them into a beautiful story. The color grading is absolutely stunning!",
+      blissfull,
+    text: "As a fellow creative in the wedding industry, I’m constantly impressed by Folklore’s eye for storytelling. Their films complement our photography beautifully, delivering a complete visual experience for couples.",
     rating: 5,
     location: "Austin, TX",
   },
   {
-    name: "Priya & Raj Patel",
+    name: "Elegant Occasions Catering",
     image:
-      "https://img.freepik.com/free-photo/smiling-couple-holding-each-other-s-hand-standing-against-blue-sky_23-2148103056.jpg?uid=R103194381&ga=GA1.1.289768406.1747801732&semt=ais_hybrid&w=740",
-    text: "Folklore perfectly captured the essence of our multicultural wedding. They understood our vision and delivered a masterpiece that beautifully blends both our traditions. Simply phenomenal work!",
+     elegance,
+    text: "Folklore captures the ambiance and joy of our events like no other. Their team is professional, easy to collaborate with, and consistently delivers breathtaking results that showcase the culinary artistry of our weddings.",
     rating: 5,
     location: "Los Angeles, CA",
   },
 ];
+
 
 export default function Faq() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -211,7 +216,7 @@ export default function Faq() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-romantica text-primary mb-6">
-              Love Stories from Our Couples
+              Endorsed by Wedding Experts
             </h2>
             <div className="w-20 h-1 bg-secondary mx-auto mb-8"></div>
           </div>
