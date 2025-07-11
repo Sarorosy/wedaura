@@ -63,7 +63,7 @@ const Contact = () => {
       >
         <div className="bg-accent bg-opacity-90 max-w-4xl mx-auto rounded-xl shadow-xl p-8 backdrop-blur-md">
           <h1 className="text-4xl font-serifStyle text-primary mb-2 text-center">Get in Touch</h1>
-          <p className="text-center text-md eb tracking-wider text-darkBrown mb-6">
+          <p className="text-center text-lg font-elegance tracking-wider text-darkBrown mb-6">
             We'd love to hear from you! Fill out the form below to get in touch with the <strong>Folklore</strong> team.
           </p>
           <form onSubmit={handleSubmit}  className="grid grid-cols-1 md:grid-cols-2 gap-4 font-serifStyle text-sm">
