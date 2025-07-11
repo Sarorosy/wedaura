@@ -74,33 +74,30 @@ const faqs = [
       "Yes, we believe personalised solutions are key. We'll offer a 100% tailored wedding video editing package.",
   },
 ];
-
 const testimonials = [
   {
     name: "Grace Events Co.",
-    image:
-      grace,
-    text: "Working with Folklore has elevated the weddings we plan. Their cinematography seamlessly captures every detail we design, creating stunning memories for our clients. Truly professional and creative partners.",
+    image: grace,
+    text: "Partnering with FolkLore has transformed how our weddings are remembered. Their video edits beautifully weave together every moment we plan, creating emotional, cinematic stories that our clients cherish forever.",
     rating: 5,
     location: "San Francisco, CA",
   },
   {
     name: "Blissful Moments Photography",
-    image:
-      blissfull,
-    text: "As a fellow creative in the wedding industry, I’m constantly impressed by Folklore’s eye for storytelling. Their films complement our photography beautifully, delivering a complete visual experience for couples.",
+    image: blissfull,
+    text: "As wedding photographers, we love how seamlessly FolkLore’s edits complement our work. Their storytelling enhances the still moments we capture, creating complete, unforgettable wedding films for every couple.",
     rating: 5,
     location: "Austin, TX",
   },
   {
     name: "Elegant Occasions Catering",
-    image:
-     elegance,
-    text: "Folklore captures the ambiance and joy of our events like no other. Their team is professional, easy to collaborate with, and consistently delivers breathtaking results that showcase the culinary artistry of our weddings.",
+    image: elegance,
+    text: "FolkLore's wedding videos capture not just the food, but the entire ambiance of the celebrations we cater. Their editing style highlights the joy, laughter, and beauty of every event, making them a joy to work with.",
     rating: 5,
     location: "Los Angeles, CA",
   },
 ];
+
 
 
 export default function Faq() {
