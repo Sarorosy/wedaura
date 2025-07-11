@@ -128,15 +128,15 @@ const Contact = () => {
             <h2 className="text-xl font-serifStyle text-darkBrown">Call / Text / Email</h2>
             <p className="mt-2 text-sm text-darkBrown">
               <Phone className="inline-block mr-1" size={16} />
-              +91 9988100000 / +91 8877100000
+              +91 7011584331
             </p>
             <p className="text-sm text-darkBrown mt-1">
               <Mail className="inline-block mr-1" size={16} />
-              info@Folklore.in
+              contact@Folklore.in
             </p>
             <div className="mt-4">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/folkloreproductions_"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-primary hover:underline font-elegance"

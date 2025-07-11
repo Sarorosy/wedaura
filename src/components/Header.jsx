@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { Facebook, Gift, Instagram, Mail, Menu, MessageCircle, X, Youtube } from "lucide-react";
+import { Gift, Instagram, Mail, Menu, MessageCircle, X, } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import FolkLore from "../assets/Folklore-logo.png";
+import youtube from "../assets/youtube.svg";
+import facebook from "../assets/facebook.svg";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 
 const navLinksLeft = ["Contact", "Gallery"];
@@ -58,10 +60,10 @@ const Header = () => {
               <Instagram className="text-darkbrown hover:opacity-80" size={20} />
             </a>
             <a href="https://www.youtube.com/channel/UC2kgNgYUK7z91b8M6CPhomw" target="_blank" rel="noreferrer">
-              <Youtube className="text-darkbrown hover:opacity-80" size={20} />
+              <img src={youtube} className="text-darkbrown hover:opacity-80 h-6" />
             </a>
             <a href="https://facebook.com" target="_blank" rel="noreferrer">
-              <Facebook className="text-darkbrown hover:opacity-80" size={20} />
+              <img src={facebook} className="text-darkbrown hover:opacity-80 h-6" />
             </a>
           </div>
         </div>
@@ -108,14 +110,14 @@ const Header = () => {
 
               {/* Social Icons */}
               <div className="flex justify-center mx-auto space-x-3">
-                <a href="https://instagram.com" target="_blank" rel="noreferrer">
+                <a href="https://www.instagram.com/folkloreproductions_" target="_blank" rel="noreferrer">
                   <Instagram className="text-accent hover:opacity-80" size={20} />
                 </a>
-                <a href="https://youtube.com" target="_blank" rel="noreferrer">
-                  <Youtube className="text-accent hover:opacity-80" size={20} />
+                <a href="https://www.youtube.com/channel/UC2kgNgYUK7z91b8M6CPhomw" target="_blank" rel="noreferrer">
+                  <img src={youtube} className="text-darkbrown hover:opacity-80 h-6" />
                 </a>
                 <a href="https://facebook.com" target="_blank" rel="noreferrer">
-                  <Facebook className="text-accent hover:opacity-80" size={20} />
+                  <img src={facebook} className="text-darkbrown hover:opacity-80 h-6" />
                 </a>
               </div>
             </motion.div>

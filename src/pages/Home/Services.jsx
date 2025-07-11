@@ -30,18 +30,18 @@ const services = [
     description: "10–15 min, 25–30 min storytelling (CUSTOMISABLE)",
     icon: Film,
   },
-  {
-    title: "Wedding Invitation & Pre-Wedding Video",
-    description:
-      "Captivate your guests with a preview of the celebration to come.",
-    icon: Video,
-  },
-  {
-    title: "Anniversary Videos",
-    description:
-      "With each anniversary, renew and reminisce the joy of your union.",
-    icon: Heart,
-  },
+  // {
+  //   title: "Wedding Invitation & Pre-Wedding Video",
+  //   description:
+  //     "Captivate your guests with a preview of the celebration to come.",
+  //   icon: Video,
+  // },
+  // {
+  //   title: "Anniversary Videos",
+  //   description:
+  //     "With each anniversary, renew and reminisce the joy of your union.",
+  //   icon: Heart,
+  // },
 ];
 
 export default function Services() {
@@ -69,7 +69,7 @@ export default function Services() {
         </motion.div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
