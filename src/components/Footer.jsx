@@ -54,7 +54,7 @@ export default function Footer() {
 
       {/* Bottom text */}
       <div className="text-center text-xs text-[#8b9c8e] mt-6">
-        © 2023 Folklore | <a href="#" className="underline">Privacy Policy</a>
+        © 2023 Folklore | <a onClick={()=>{navigate('/privacy-policy')}} className="underline cursor-pointer">Privacy Policy</a>
       </div>
     </footer>
   );

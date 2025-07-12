@@ -20,6 +20,7 @@ import Contact from './pages/Contact'
 import ScrollToTop from './components/ScrollToTop'
 import About from './pages/About'
 import WhyUs from './pages/WhyUs'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/whyUs" element={<WhyUs />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
       </Router>
 
