@@ -1,8 +1,11 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Film } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const SmallAbout = () => {
+
+  const navigate = useNavigate();
   return (
     <section className="w-full bg-accent/10 text-primary py-16 px-6 md:px-20">
       <motion.div
@@ -30,7 +33,7 @@ const SmallAbout = () => {
         </p>
 
         <motion.a
-          href="#contact"
+          onClick={()=>{navigate('/contact')}}
           className="inline-block  border border-darkBrown text-darkBrown px-6 py-2 rounded text-sm font-medium shadow hover:bg-darkBrown hover:text-white transition"
           whileHover={{ scale: 1.05 }}
         >
