@@ -32,7 +32,7 @@ export default function Footer() {
             <Wrench size={16} />
             <span>PORTFOLIO</span>
           </a>
-          <a href="#about" className="cursor-pointer flex items-center space-x-1 hover:underline">
+          <a onClick={()=>{navigate('/about')}}  className="cursor-pointer flex items-center space-x-1 hover:underline">
             <GraduationCap size={16} />
             <span>ABOUT</span>
           </a>
