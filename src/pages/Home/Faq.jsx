@@ -78,7 +78,7 @@ const testimonials = [
   {
     name: "Grace Events Co.",
     image: grace,
-    text: "Partnering with FolkLore has transformed how our weddings are remembered. Their video edits beautifully weave together every moment we plan, creating emotional, cinematic stories that our clients cherish forever.",
+    text: "FolkLore consistently elevates the weddings we plan through their exceptional storytelling. Their video edits beautifully weave together every moment we design, creating emotional, cinematic stories that our clients cherish forever.",
     rating: 5,
     location: "San Francisco, CA",
   },
@@ -92,7 +92,7 @@ const testimonials = [
   {
     name: "Elegant Occasions Catering",
     image: elegance,
-    text: "FolkLore's wedding videos capture not just the food, but the entire ambiance of the celebrations we cater. Their editing style highlights the joy, laughter, and beauty of every event, making them a joy to work with.",
+    text: "FolkLore’s edits capture the heart of every celebration. Their storytelling turns wedding moments into timeless films that couples treasure. They’re true professionals—creative, reliable, and a joy to work alongside on any event.",
     rating: 5,
     location: "Los Angeles, CA",
   },

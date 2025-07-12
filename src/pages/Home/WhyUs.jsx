@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 
 const points = [
-  "Every video editor on the team has at least five years of editing experience editing.",
+  "Every video editor on the team has at least five years of editing experience.",
   "7 – 15 days turnaround per project.",
   "Our team of 4 wedding video editors and one manager is based in New Delhi, India.",
   "Over the course of the studio’s existence, we’ve edited over 500 wedding videos.",
