@@ -1,12 +1,58 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "react-hot-toast";
 import bgImage from "../../assets/footerbg.jpg";
 
 const FooterForm = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    toast.success("Your message has been sent!");
+
+  const [form, setForm] = useState({
+      firstName: "",
+      lastName: "",
+      email: "",
+      phone: "",
+      subject: "",
+      query: "",
+    });
+  
+
+
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  if(!form.firstName || !form.lastName || !form.email || !form.phone || !form.subject || !form.query){
+    toast.error("Please fill all fields");
+    return
+  }
+
+  try {
+    const response = await fetch("https://formspree.io/f/xeokyleq", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(form), // assuming `form` contains your form state
+    });
+
+    if (response.ok) {
+      toast.success("Submitted successfully! We'll get back to you soon.");
+      setForm({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        subject: "",
+        query: "",
+      });
+    } else {
+      toast.error("Submission failed. Please try again later.");
+    }
+  } catch (error) {
+    console.error(error);
+    toast.error("Something went wrong. Please try again later.");
+  }
+};
+
+const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   return (
@@ -35,13 +81,19 @@ const FooterForm = () => {
             <label className="block text-sm font-medium">First Name</label>
             <input
               type="text"
+              name="firstName"
               placeholder="Enter your first name"
+              value={form.firstName}
+              onChange={handleChange}
               className="mt-1 w-full rounded-md border border-white/30 bg-white/20 text-white placeholder-white/70 p-2 focus:outline-none focus:ring-2 focus:ring-secondary"
             />
           </div>
           <div>
             <label className="block text-sm font-medium">Last Name</label>
             <input
+            name="lastName"
+            onChange={handleChange}
+            value={form.lastName}
               type="text"
               placeholder="Enter your last name"
               className="mt-1 w-full rounded-md border border-white/30 bg-white/20 text-white placeholder-white/70 p-2 focus:outline-none focus:ring-2 focus:ring-secondary"
@@ -50,6 +102,9 @@ const FooterForm = () => {
           <div>
             <label className="block text-sm font-medium">Email</label>
             <input
+            value={form.email}
+            onChange={handleChange}
+            name="email"
               type="email"
               placeholder="Enter your email"
               className="mt-1 w-full rounded-md border border-white/30 bg-white/20 text-white placeholder-white/70 p-2 focus:outline-none focus:ring-2 focus:ring-secondary"
@@ -59,6 +114,9 @@ const FooterForm = () => {
             <label className="block text-sm font-medium">Phone</label>
             <input
               type="text"
+              value={form.phone}
+              onChange={handleChange}
+              name="phone"
               placeholder="Enter your WhatsApp number with country code"
               className="mt-1 w-full rounded-md border border-white/30 bg-white/20 text-white placeholder-white/70 p-2 focus:outline-none focus:ring-2 focus:ring-secondary"
             />
@@ -67,6 +125,9 @@ const FooterForm = () => {
             <label className="block text-sm font-medium">Subject</label>
             <input
               type="text"
+              value={form.subject}
+              onChange={handleChange}
+              name="subject"
               placeholder="Enter subject line"
               className="mt-1 w-full rounded-md border border-white/30 bg-white/20 text-white placeholder-white/70 p-2 focus:outline-none focus:ring-2 focus:ring-secondary"
             />
@@ -74,6 +135,9 @@ const FooterForm = () => {
           <div className="md:col-span-2">
             <label className="block text-sm font-medium">Your Query</label>
             <textarea
+            value={form.query}
+            onChange={handleChange}
+            name="query"
               placeholder="Enter your query"
               rows="4"
               className="mt-1 w-full rounded-md border border-white/30 bg-white/20 text-white placeholder-white/70 p-2 focus:outline-none focus:ring-2 focus:ring-secondary"

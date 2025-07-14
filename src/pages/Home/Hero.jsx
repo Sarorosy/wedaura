@@ -1,8 +1,11 @@
 import React from 'react';
 import { Play } from 'lucide-react';
 import herobg from '../../assets/hero-bg.mp4';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative h-[75vh] w-full overflow-hidden flex items-center justify-center text-center">
       {/* Background Video */}
@@ -26,16 +29,20 @@ const Hero = () => {
           Wedding film Editing Firm for wedding filmmakers
         </h1>
         <p className="text-white text-lg md:text-2xl eb-regular">
-          TURNING YOUR RAW FOOTAGE INTO TIMESS FOLKTALES
+          TURNING YOUR RAW FOOTAGE INTO TIMELINE FOLKTALES
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col md:flex-row gap-4 mt-4">
-          <button className="flex items-center justify-center gap-2 bg-white/80 text-black px-6 py-2 rounded-full font-medium hover:bg-white shadow-lg">
+          <button
+          onClick={()=>{navigate('/gallery')}}
+          className="flex items-center justify-center gap-2 bg-white/80 text-black px-6 py-2 rounded-full font-medium hover:bg-white shadow-lg">
             <Play className="w-4 h-4" />
             Watch Now
           </button>
-          <button className="bg-black/80 text-white px-6 py-2 rounded-full font-medium hover:bg-black shadow-lg">
+          <button
+           onClick={()=>{navigate('/contact')}}
+           className="bg-black/80 text-white px-6 py-2 rounded-full font-medium hover:bg-black shadow-lg">
             Enquire Now
           </button>
         </div>
