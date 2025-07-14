@@ -352,6 +352,9 @@ export default function WhyUs() {
                   boxShadow: "0 20px 40px rgba(0,0,0,0.3)",
                 }}
                 whileTap={{ scale: 0.95 }}
+                onClick={() => {
+                  navigate("/contact");
+                }}
               >
                 Get Free Quote
               </motion.button>
@@ -553,7 +556,9 @@ export default function WhyUs() {
               whileTap={{ scale: 0.95 }}
             >
               <motion.div className="absolute inset-0 bg-gradient-to-r from-pink-600 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <span className="relative z-10 flex items-center space-x-2">
+              <span 
+              onClick={()=>{navigate('/contact')}}
+              className="relative z-10 flex items-center space-x-2 cursor-pointer">
                 <span>Get Your Free Quote</span>
                 <motion.div
                   animate={{ x: [0, 5, 0] }}
@@ -606,6 +611,7 @@ export default function WhyUs() {
                     if (Icon === Phone) {
                       window.location.href = "tel:+917011584331";
                     } else if (Icon === Mail) {
+                      console.log('hiii')
                       window.location.href = "mailto:contact@folkloreproducions.in";
                     } else if (Icon === Instagram) {
                       window.open(

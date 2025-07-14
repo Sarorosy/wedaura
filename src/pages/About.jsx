@@ -23,8 +23,10 @@ import abtvdo from "../assets/about.mp4";
 
 import kapil from "../assets/kapil.jpg";
 import kunal_verma from "../assets/kunal_verma.JPG";
+import { useNavigate } from "react-router-dom";
 
 const About = () => {
+  const navigate = useNavigate();
   const stats = [
     {
       icon: Heart,
@@ -363,10 +365,14 @@ const About = () => {
               that you'll treasure forever.
             </p>
             <div className="space-y-4 md:space-y-0 md:space-x-4 md:flex md:justify-center">
-              <button className="bg-accent text-primary px-8 py-4 rounded-full font-serifStyle text-lg hover:bg-accent/90 transition-colors shadow-lg">
+              <button
+              onClick={()=>{navigate('/contact')}}
+              className="bg-accent text-primary px-8 py-4 rounded-full font-serifStyle text-lg hover:bg-accent/90 transition-colors shadow-lg">
                 Get Started Today
               </button>
-              <button className="border-2 border-accent text-accent px-8 py-4 rounded-full font-serifStyle text-lg hover:bg-accent hover:text-primary transition-all">
+              <button
+              onClick={()=>{navigate('/gallery')}}
+               className="border-2 border-accent text-accent px-8 py-4 rounded-full font-serifStyle text-lg hover:bg-accent hover:text-primary transition-all">
                 View Our Portfolio
               </button>
             </div>
