@@ -134,8 +134,8 @@ const Header = () => {
             className="bg-gray-300 p-1 rounded-full text-black mr-1"
           />{" "}
           Mail us:{" "}
-          <a href="mailto:contact@folklore.com" class=" font-medium">
-            contact@folklore.com
+          <a href="mailto:contact@folkloreproducions.in" class=" font-medium">
+            contact@folkloreproducions.in
           </a>
         </span>
       </div>
