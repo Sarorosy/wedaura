@@ -8,6 +8,7 @@ import {
   Heart,
   Sparkles,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const services = [
   {
@@ -45,6 +46,8 @@ const services = [
 ];
 
 export default function Services() {
+  const navigate = useNavigate();
+  
   return (
     <section className="bg-pastel py-20 px-4 text-darkBrown">
       <div className="max-w-6xl mx-auto">
@@ -95,7 +98,9 @@ export default function Services() {
                 <p className="text-sm text-primary mb-3 px-4">{service.description}</p>
 
                 {/* Optional CTA */}
-                <button className="text-sm bg-orange-100 px-2 py-1 rounded text-darkBrown  transition">
+                <button
+                onClick={()=>{navigate('/contact')}}
+                className="text-sm bg-orange-100 px-2 py-1 rounded text-darkBrown  transition">
                   Enquire now
                 </button>
               </motion.div>
