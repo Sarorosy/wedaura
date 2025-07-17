@@ -587,7 +587,7 @@ export default function WhyUs() {
               transition={{ duration: 0.8 }}
             >
               <p className="text-lg opacity-80">
-                © 2025 by FolkLore - Crafting Perfect Moments
+                © 2024 by FolkLore - Crafting Perfect Moments
               </p>
             </motion.div>
 

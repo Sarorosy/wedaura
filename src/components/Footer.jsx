@@ -54,7 +54,7 @@ export default function Footer() {
 
       {/* Bottom text */}
       <div className="text-center text-xs text-[#8b9c8e] mt-6">
-        © 2025 by FolkLore - Crafting Perfect Moments | <a onClick={()=>{navigate('/privacy-policy')}} className="underline cursor-pointer">Privacy Policy</a>
+        © 2024 by FolkLore - Crafting Perfect Moments | <a onClick={()=>{navigate('/privacy-policy')}} className="underline cursor-pointer">Privacy Policy</a>
       </div>
     </footer>
   );
