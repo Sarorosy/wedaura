@@ -141,8 +141,8 @@ const Header = () => {
         <span className="flex items-center text-accent">
           <Mail size={28} className="bg-gray-300 p-1 rounded-full text-black mr-1" />{" "}
           Mail us:{" "}
-          <a href="mailto:contact@folkloreproducions.in" className="font-medium">
-            contact@folkloreproducions.in
+          <a href="mailto:contact@folkloreproductions.in" className="font-medium">
+            contact@folkloreproductions.in
           </a>
         </span>
       </div>
