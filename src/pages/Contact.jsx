@@ -151,7 +151,7 @@ const Contact = () => {
             </p>
             <p className="text-sm text-darkBrown mt-1">
               <Mail className="inline-block mr-1" size={16} />
-              contact@Folklore.in
+              contact@folkloreproductions.in
             </p>
             <div className="mt-4">
               <a

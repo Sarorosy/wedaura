@@ -612,7 +612,7 @@ export default function WhyUs() {
                       window.location.href = "tel:+917011584331";
                     } else if (Icon === Mail) {
                       console.log('hiii')
-                      window.location.href = "mailto:contact@folkloreproducions.in";
+                      window.location.href = "mailto:contact@folkloreproductions.in";
                     } else if (Icon === Instagram) {
                       window.open(
                         "https://www.instagram.com/folkloreproductions_",
@@ -640,7 +640,7 @@ export default function WhyUs() {
               <div className="text-lg">
                 <span className="text-blue-400">✉️</span>
                 <span className="font-semibold mx-2">
-                  contact@folkloreproducions.in
+                  contact@folkloreproductions.in
                 </span>
               </div>
             </motion.div>
